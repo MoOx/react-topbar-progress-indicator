@@ -5,11 +5,11 @@
 .*/__tests__/.*
 
 [include]
-./node_modules/
+node_modules
 
 [libs]
-./node_modules/flow-interfaces/interfaces/
-./interfaces/
+node_modules/flow-interfaces/interfaces
+interfaces
 
 [options]
 esproposal.class_instance_fields=enable
