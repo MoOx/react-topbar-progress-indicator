@@ -3,18 +3,17 @@
 [![Unix Build status](https://img.shields.io/travis/MoOx/react-topbar-progress-indicator/master.svg?branch=master&label=unix%20build)](https://travis-ci.org/MoOx/react-topbar-progress-indicator)
 [![Code Coverage](https://img.shields.io/coveralls/MoOx/react-topbar-progress-indicator/master.svg)](https://coveralls.io/github/MoOx/react-topbar-progress-indicator)
 [![Version](https://img.shields.io/npm/v/react-topbar-progress-indicator.svg)](https://github.com/MoOx/react-topbar-progress-indicator/blob/master/CHANGELOG.md)
-[![Support on gitter chat](https://img.shields.io/badge/support-gitter%20chat-E40255.svg)](https://gitter.im/MoOx/react-topbar-progress-indicator)
 
-> topbar React component
+> topbar progress indicator React component
 
 Will simply `show()` and `hide()` [topbar](https://github.com/buunguyen/topbar)
 when the component is respectively mounted and unmounted.
 
-**Since topbar is a singleton, using `<TopBar />` multiples times will
+**Since topbar is a singleton, using `<TopBarProgress />` multiples times will
 take this in consideration. This means that `hide()` will only be called when
-all `<TopBar />` have been unmounted.**
+all `<TopBarProgress />` have been unmounted.**
 
-For example, if you render 2 `<TopBar />` and unmount one (eg: you are doing 2
+For example, if you render 2 `<TopBarProgress />` and unmount one (eg: you are doing 2
 async things and only once is done), `hide()` won't be called.
 You will need to have both instances unmounted.
 
@@ -27,8 +26,15 @@ $ npm install react-topbar-progress-indicator
 ## Usage
 
 ```js
-import TopBar from "react-topbar-progress-indicator"
+import TopBarProgress from "react-topbar-progress-indicator"
 
+TopBarProgress.config({
+  barColors: {
+    "0": "#fff",
+    "1.0": "#fff",
+  },
+  shadowBlur: 5,
+})
 
 class ReactClass extends Component {
 
@@ -38,12 +44,42 @@ class ReactClass extends Component {
     return {
       {
         this.state.loading &&
-        <TopBar />
+        <TopBarProgress />
       }
     }
   }
 }
 ```
+
+### Config
+
+Since ``topbar`` is a singleton, you should configure via ``Topbar.config()``.
+
+#### ``barThickness`` (Integer, px)
+
+The progress bar thickness in ``px`` (default: 3).
+
+#### ``barColors`` (Object { progress: color })
+
+Object of gradient color stops used to draw the progress bar.
+
+Example:
+
+```js
+  barColors: {
+    "0": "#f00",
+    "0.5": "#0f0",
+    "1.0": "#00f",
+  },
+```
+
+#### ``shadowBlur``
+
+Integer of the shadow blur in ``px`` (default: ``10``).
+
+#### ``shadowColor``
+
+String that represent the shadow color (hexa, default: ``#000``).
 
 ---
 

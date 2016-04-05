@@ -1,12 +1,15 @@
 {
   "name": "react-topbar-progress-indicator",
   "version": "1.0.0",
-  "description": "topbar React component",
+  "description": "topbar progress indicator React component",
   "keywords": [
     "react",
     "topbar",
     "progress",
-    "loading"
+    "progressbar",
+    "loading",
+    "loader",
+    "indicator"
   ],
   "author": "Maxime Thirouin",
   "license": "MIT",

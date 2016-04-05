@@ -82,3 +82,11 @@ test("ReactTopBar can show/hide topbar even with multiples call, but once",
   renderer.unmount()
   renderer2.unmount()
 })
+
+test("ReactTopBar exposes topbar config function",
+(t) => {
+  t.is(
+    typeof ReactTopBar.config,
+    "function"
+  )
+})

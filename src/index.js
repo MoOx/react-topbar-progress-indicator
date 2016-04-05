@@ -5,18 +5,31 @@
 
 import React, { Component } from "react"
 
+// topbar require window, so here is an universal workaround
+const topbar: Topbar = (
+  typeof window === "undefined"
+  ? {
+    show: () => {},
+    hide: () => {},
+    config: () => {},
+  }
+  : require("topbar")
+)
+
 let semaphore: number = 0
 
 type Props = {
-  topbar?: topbar,
+  topbar?: Topbar,
 }
 
-const getTopBar = (props: Props): topbar => {
-  return props.topbar || require("topbar")
+const getTopBar = (props: Props): Topbar => {
+  return props.topbar || topbar
 }
 
 class TopBar extends Component<void, Props, void> {
   props: Props;
+
+  static config: Function = topbar.config;
 
   componentWillMount(): void {
     if (semaphore === 0) {
