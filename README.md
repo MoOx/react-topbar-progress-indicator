@@ -1,9 +1,9 @@
-# react-topbar
+# react-topbar-progress-indicator
 
-[![Unix Build status](https://img.shields.io/travis/MoOx/react-topbar/master.svg?branch=master&label=unix%20build)](https://travis-ci.org/MoOx/react-topbar)
-[![Code Coverage](https://img.shields.io/coveralls/MoOx/react-topbar/master.svg)](https://coveralls.io/github/MoOx/react-topbar)
-[![Version](https://img.shields.io/npm/v/react-topbar.svg)](https://github.com/MoOx/react-topbar/blob/master/CHANGELOG.md)
-[![Support on gitter chat](https://img.shields.io/badge/support-gitter%20chat-E40255.svg)](https://gitter.im/MoOx/react-topbar)
+[![Unix Build status](https://img.shields.io/travis/MoOx/react-topbar-progress-indicator/master.svg?branch=master&label=unix%20build)](https://travis-ci.org/MoOx/react-topbar-progress-indicator)
+[![Code Coverage](https://img.shields.io/coveralls/MoOx/react-topbar-progress-indicator/master.svg)](https://coveralls.io/github/MoOx/react-topbar-progress-indicator)
+[![Version](https://img.shields.io/npm/v/react-topbar-progress-indicator.svg)](https://github.com/MoOx/react-topbar-progress-indicator/blob/master/CHANGELOG.md)
+[![Support on gitter chat](https://img.shields.io/badge/support-gitter%20chat-E40255.svg)](https://gitter.im/MoOx/react-topbar-progress-indicator)
 
 > topbar React component
 
@@ -21,13 +21,13 @@ You will need to have both instances unmounted.
 ## Installation
 
 ```console
-$ npm install react-topbar
+$ npm install react-topbar-progress-indicator
 ```
 
 ## Usage
 
 ```js
-import TopBar from "react-topbar"
+import TopBar from "react-topbar-progress-indicator"
 
 
 class ReactClass extends Component {

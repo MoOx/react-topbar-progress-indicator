@@ -1,5 +1,5 @@
 {
-  "name": "react-topbar",
+  "name": "react-topbar-progress-indicator",
   "version": "1.0.0",
   "description": "topbar React component",
   "keywords": [
@@ -10,7 +10,7 @@
   ],
   "author": "Maxime Thirouin",
   "license": "MIT",
-  "repository": "https://github.com/MoOx/react-topbar.git",
+  "repository": "https://github.com/MoOx/react-topbar-progress-indicator.git",
   "main": "lib/index.js",
   "files": [
     "lib",
