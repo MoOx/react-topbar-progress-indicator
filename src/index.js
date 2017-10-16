@@ -1,4 +1,4 @@
-/* @flow */
+// @flow
 
 /* eslint-disable no-unused-vars */
 // for React, since flow type is converted to props
@@ -26,26 +26,26 @@ const getTopBar = (props: Props): Topbar => {
   return props.topbar || topbar
 }
 
-class TopBar extends Component<void, Props, void> {
+class TopBar extends Component<Props> {
   props: Props;
 
-  static config: Function = topbar.config;
+  static config = topbar.config;
 
-  componentWillMount(): void {
+  componentWillMount() {
     if (semaphore === 0) {
       getTopBar(this.props).show()
     }
     semaphore++
   }
 
-  componentWillUnmount(): void {
+  componentWillUnmount() {
     semaphore--
     if (semaphore === 0) {
       getTopBar(this.props).hide()
     }
   }
 
-  render(): null {
+  render() {
     return null
   }
 }

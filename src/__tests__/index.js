@@ -1,7 +1,7 @@
 import test from "ava"
 
 import React from "react"
-import { createRenderer } from "react-addons-test-utils"
+import ShallowRenderer from "react-test-renderer/shallow"
 
 import ReactTopBar from "../index"
 
@@ -15,7 +15,7 @@ test("ReactTopBar can show topbar", (t) => {
     hide() {},
   }
 
-  const renderer = createRenderer()
+  const renderer = new ShallowRenderer()
   renderer.render(<ReactTopBar topbar={ topbar } />)
   renderer.getRenderOutput()
   renderer.unmount()
@@ -31,7 +31,7 @@ test("ReactTopBar can hide topbar", (t) => {
     },
   }
 
-  const renderer = createRenderer()
+  const renderer = new ShallowRenderer()
   renderer.render(<ReactTopBar topbar={ topbar } />)
   renderer.getRenderOutput()
   renderer.unmount()
@@ -49,7 +49,7 @@ test("ReactTopBar can show/hide topbar", (t) => {
     },
   }
 
-  const renderer = createRenderer()
+  const renderer = new ShallowRenderer()
   renderer.render(<ReactTopBar topbar={ topbar } />)
   renderer.getRenderOutput()
   renderer.unmount()
@@ -68,10 +68,10 @@ test("ReactTopBar can show/hide topbar even with multiples call, but once",
     },
   }
 
-  const renderer = createRenderer()
+  const renderer = new ShallowRenderer()
   renderer.render(<ReactTopBar topbar={ topbar } />)
   renderer.getRenderOutput()
-  const renderer2 = createRenderer()
+  const renderer2 = new ShallowRenderer()
   renderer2.render(<ReactTopBar topbar={ topbar } />)
   renderer2.getRenderOutput()
 
