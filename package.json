@@ -48,7 +48,7 @@
   },
   "scripts": {
     "transpile": "babel --ignore __tests__ --copy-files src --out-dir lib",
-    "prepublish": "rimraf lib && npm -s run transpile",
+    "prepare": "rimraf lib && npm -s run transpile",
     "lint:js:eslint": "eslint --ignore-path .gitignore --fix .",
     "lint:js:flow": "flow src",
     "lint:js": "npm -s run lint:js:eslint && npm -s run lint:js:flow",
