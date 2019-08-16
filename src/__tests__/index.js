@@ -1,88 +1,104 @@
-import test from "ava"
+import React from "react";
+import renderer from "react-test-renderer";
 
-import React from "react"
-import ShallowRenderer from "react-test-renderer/shallow"
+import ReactTopBar from "../index";
 
-import ReactTopBar from "../index"
-
-test("ReactTopBar can show topbar", (t) => {
-  t.plan(1)
+test("ReactTopBar can show topbar", () => {
+  let count = 0;
 
   const topbar = {
     show() {
-      t.pass()
+      count++;
     },
-    hide() {},
-  }
+    hide() {}
+  };
 
-  const renderer = new ShallowRenderer()
-  renderer.render(<ReactTopBar topbar={ topbar } />)
-  renderer.getRenderOutput()
-  renderer.unmount()
-})
+  let root;
+  renderer.act(() => {
+    root = renderer.create(<ReactTopBar topbar={topbar} />);
+  });
+  renderer.act(() => {
+    root.unmount();
+  });
 
-test("ReactTopBar can hide topbar", (t) => {
-  t.plan(1)
+  expect(count).toBe(1);
+});
+
+test("ReactTopBar can hide topbar", () => {
+  let count = 0;
 
   const topbar = {
     show() {},
     hide() {
-      t.pass()
-    },
-  }
+      count++;
+    }
+  };
 
-  const renderer = new ShallowRenderer()
-  renderer.render(<ReactTopBar topbar={ topbar } />)
-  renderer.getRenderOutput()
-  renderer.unmount()
-})
+  let root;
+  renderer.act(() => {
+    root = renderer.create(<ReactTopBar topbar={topbar} />);
+  });
+  renderer.act(() => {
+    root.unmount();
+  });
 
-test("ReactTopBar can show/hide topbar", (t) => {
-  t.plan(2)
+  expect(count).toBe(1);
+});
 
-  const topbar = {
-    show() {
-      t.pass()
-    },
-    hide() {
-      t.pass()
-    },
-  }
-
-  const renderer = new ShallowRenderer()
-  renderer.render(<ReactTopBar topbar={ topbar } />)
-  renderer.getRenderOutput()
-  renderer.unmount()
-})
-
-test("ReactTopBar can show/hide topbar even with multiples call, but once",
-(t) => {
-  t.plan(2)
+test("ReactTopBar can show/hide topbar", () => {
+  let count = 0;
 
   const topbar = {
     show() {
-      t.pass()
+      count++;
     },
     hide() {
-      t.pass()
+      count++;
+    }
+  };
+
+  let root;
+  renderer.act(() => {
+    root = renderer.create(<ReactTopBar topbar={topbar} />);
+  });
+  renderer.act(() => {
+    root.unmount();
+  });
+
+  expect(count).toBe(2);
+});
+
+test("ReactTopBar can show/hide topbar even with multiples call, but once", () => {
+  let count = 0;
+
+  const topbar = {
+    show() {
+      count++;
     },
-  }
+    hide() {
+      count++;
+    }
+  };
 
-  const renderer = new ShallowRenderer()
-  renderer.render(<ReactTopBar topbar={ topbar } />)
-  renderer.getRenderOutput()
-  const renderer2 = new ShallowRenderer()
-  renderer2.render(<ReactTopBar topbar={ topbar } />)
-  renderer2.getRenderOutput()
+  let root;
+  renderer.act(() => {
+    root = renderer.create(<ReactTopBar topbar={topbar} />);
+  });
+  let root2;
+  renderer.act(() => {
+    root2 = renderer.create(<ReactTopBar topbar={topbar} />);
+  });
 
-  renderer.unmount()
-  renderer2.unmount()
-})
+  renderer.act(() => {
+    root.unmount();
+  });
+  renderer.act(() => {
+    root2.unmount();
+  });
 
-test("ReactTopBar exposes topbar config function",
-(t) => {
-  t.is(
-    typeof ReactTopBar.config,
-    "function"
-  )
-})
+  expect(count).toBe(2);
+});
+
+test("ReactTopBar exposes topbar config function", () => {
+  expect(typeof ReactTopBar.config).toBe("function");
+});

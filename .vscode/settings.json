@@ -1,0 +1,7 @@
+{
+  "javascript.validate.enable": false,
+  "typescript.format.enable": false,
+  "typescript.validate.enable": false,
+  "flow.useBundledFlow": false,
+  "eslint.enable": true
+}

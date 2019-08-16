@@ -9,9 +9,3 @@ node_modules
 
 # build
 lib
-
-# tests results
-**/__tests__/_output*
-
-# code coverage
-.nyc_output
