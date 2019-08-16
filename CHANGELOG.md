@@ -1,3 +1,9 @@
+- Switch from a React class to a function with `useEffect()` (require React 16.8)
+
+## Internal
+
+- No more babel, just vanilla JS (typed with flow annotations in comments)
+
 # 3.0.0 - 2019-08-16
 
 - React 16.9.0 compat (replace `componentWillMount` by `componentDidMount`) [#5](https://github.com/MoOx/react-topbar-progress-indicator/issues/5)

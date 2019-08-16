@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Component } from "react";
+const React = require("react");
 
 // topbar require window, so here is an universal workaround
 const topbar =
@@ -12,38 +12,36 @@ const topbar =
       }
     : require("topbar");
 
-let semaphore: number = 0;
+let semaphore /*: number*/ = 0;
 
+/*::
 type Props = {
   topbar?: typeof topbar
 };
+*/
 
-const getTopBar = (props: Props): typeof topbar => {
+const getTopBar = (props /*: Props*/) /*: typeof topbar*/ => {
   return props.topbar || topbar;
 };
 
-class TopBar extends Component<Props> {
-  props: Props;
-
-  static config = topbar.config;
-
-  componentDidMount() {
+function TopBar(props /*: Props */) {
+  React.useEffect(function() {
     if (semaphore === 0) {
-      getTopBar(this.props).show();
+      getTopBar(props).show();
     }
     semaphore++;
-  }
 
-  componentWillUnmount() {
-    semaphore--;
-    if (semaphore === 0) {
-      getTopBar(this.props).hide();
-    }
-  }
+    return function() {
+      semaphore--;
+      if (semaphore === 0) {
+        getTopBar(props).hide();
+      }
+    };
+  }, []);
 
-  render() {
-    return null;
-  }
+  return null;
 }
 
-export default TopBar;
+TopBar.config = topbar.config;
+
+module.exports = TopBar;

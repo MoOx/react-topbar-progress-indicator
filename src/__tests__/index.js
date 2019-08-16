@@ -1,7 +1,7 @@
-import React from "react";
-import renderer from "react-test-renderer";
+const React = require("react");
+const renderer = require("react-test-renderer");
 
-import ReactTopBar from "../index";
+const ReactTopBar = require("../index");
 
 test("ReactTopBar can show topbar", () => {
   let count = 0;
@@ -15,7 +15,9 @@ test("ReactTopBar can show topbar", () => {
 
   let root;
   renderer.act(() => {
-    root = renderer.create(<ReactTopBar topbar={topbar} />);
+    root = renderer.create(
+      React.createElement(ReactTopBar, { topbar: topbar })
+    );
   });
   renderer.act(() => {
     root.unmount();
@@ -36,7 +38,9 @@ test("ReactTopBar can hide topbar", () => {
 
   let root;
   renderer.act(() => {
-    root = renderer.create(<ReactTopBar topbar={topbar} />);
+    root = renderer.create(
+      React.createElement(ReactTopBar, { topbar: topbar })
+    );
   });
   renderer.act(() => {
     root.unmount();
@@ -59,7 +63,9 @@ test("ReactTopBar can show/hide topbar", () => {
 
   let root;
   renderer.act(() => {
-    root = renderer.create(<ReactTopBar topbar={topbar} />);
+    root = renderer.create(
+      React.createElement(ReactTopBar, { topbar: topbar })
+    );
   });
   renderer.act(() => {
     root.unmount();
@@ -82,11 +88,15 @@ test("ReactTopBar can show/hide topbar even with multiples call, but once", () =
 
   let root;
   renderer.act(() => {
-    root = renderer.create(<ReactTopBar topbar={topbar} />);
+    root = renderer.create(
+      React.createElement(ReactTopBar, { topbar: topbar })
+    );
   });
   let root2;
   renderer.act(() => {
-    root2 = renderer.create(<ReactTopBar topbar={topbar} />);
+    root2 = renderer.create(
+      React.createElement(ReactTopBar, { topbar: topbar })
+    );
   });
 
   renderer.act(() => {
