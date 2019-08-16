@@ -1,3 +1,7 @@
+# 4.0.1 - 2019-08-16
+
+- Fix: use var instead of const/let for compatibility as this module is not transpiled
+
 # 4.0.0 - 2019-08-16
 
 - Switch from a React class to a function with `useEffect()` (require React 16.8)
