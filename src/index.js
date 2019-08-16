@@ -1,9 +1,9 @@
 // @flow
 
-const React = require("react");
+var React = require("react");
 
 // topbar require window, so here is an universal workaround
-const topbar =
+var topbar =
   typeof window === "undefined"
     ? {
         show: () => {},
@@ -12,7 +12,7 @@ const topbar =
       }
     : require("topbar");
 
-let semaphore /*: number*/ = 0;
+var semaphore /*: number*/ = 0;
 
 /*::
 type Props = {
@@ -20,7 +20,7 @@ type Props = {
 };
 */
 
-const getTopBar = (props /*: Props*/) /*: typeof topbar*/ => {
+var getTopBar = (props /*: Props*/) /*: typeof topbar*/ => {
   return props.topbar || topbar;
 };
 
