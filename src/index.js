@@ -1,12 +1,9 @@
 // @flow
 
-/* eslint-disable no-unused-vars */
-// for React, since flow type is converted to props
-
 import React, { Component } from "react"
 
 // topbar require window, so here is an universal workaround
-const topbar: Topbar = (
+const topbar =
   typeof window === "undefined"
   ? {
     show: () => {},
@@ -14,15 +11,14 @@ const topbar: Topbar = (
     config: () => {},
   }
   : require("topbar")
-)
 
 let semaphore: number = 0
 
 type Props = {
-  topbar?: Topbar,
+  topbar?: typeof topbar
 }
 
-const getTopBar = (props: Props): Topbar => {
+const getTopBar = (props: Props): typeof topbar => {
   return props.topbar || topbar
 }
 
