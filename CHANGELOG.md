@@ -1,3 +1,5 @@
+# 4.0.0 - 2019-08-16
+
 - Switch from a React class to a function with `useEffect()` (require React 16.8)
 
 ## Internal
