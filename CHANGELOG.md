@@ -1,5 +1,6 @@
 ## Internal
 
+- Test on node 8 & 10
 - Babel 6 -> 7
 - Test ava -> jest
 - Removed eslint & nyc on the codebase (unecessary considering the non complexity of the code of this component)
