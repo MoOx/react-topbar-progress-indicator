@@ -1,6 +1,6 @@
 {
   "name": "react-topbar-progress-indicator",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "topbar progress indicator React component",
   "keywords": [
     "react",
@@ -44,7 +44,7 @@
   "scripts": {
     "transpile": "babel --ignore __tests__ --copy-files src --out-dir lib",
     "prepare": "rimraf lib && npm -s run transpile",
-    "test": "flow src && ava",
+    "test": "flow src && jest src",
     "release": "npmpub"
   },
   "husky": {
