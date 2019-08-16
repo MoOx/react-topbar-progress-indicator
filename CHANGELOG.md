@@ -1,3 +1,5 @@
+- React 16.9.0 compat (replace `componentWillMount` by `componentDidMount`) [#5](https://github.com/MoOx/react-topbar-progress-indicator/issues/5)
+
 ## Internal
 
 - Test on node 8 & 10

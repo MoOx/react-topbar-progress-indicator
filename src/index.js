@@ -27,7 +27,7 @@ class TopBar extends Component<Props> {
 
   static config = topbar.config;
 
-  componentWillMount() {
+  componentDidMount() {
     if (semaphore === 0) {
       getTopBar(this.props).show()
     }
