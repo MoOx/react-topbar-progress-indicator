@@ -6,9 +6,9 @@ var React = require("react");
 var topbar =
   typeof window === "undefined"
     ? {
-        show: () => {},
-        hide: () => {},
-        config: () => {}
+        show: function() {},
+        hide: function() {},
+        config: function() {}
       }
     : require("topbar");
 
@@ -20,7 +20,7 @@ type Props = {
 };
 */
 
-var getTopBar = (props /*: Props*/) /*: typeof topbar*/ => {
+var getTopBar = function(props /*: Props*/) /*: typeof topbar*/ {
   return props.topbar || topbar;
 };
 
