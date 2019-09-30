@@ -1,5 +1,9 @@
 # Changelog of `react-topbar-progress-indicator`
 
+## 4.0.2 - 2019-09-30
+
+- Fix: avoid arrow function to improve browser compatibility
+
 ## 4.0.1 - 2019-08-16
 
 - Fix: use var instead of const/let for compatibility as this module is not transpiled

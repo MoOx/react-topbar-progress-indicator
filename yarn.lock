@@ -1431,10 +1431,10 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-github-release-from-changelog@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/github-release-from-changelog/-/github-release-from-changelog-1.3.2.tgz#a4ba87e3f2a568414f724ca37d3b4ab16647c9ca"
-  integrity sha512-3Cj5zazWfk9heJzBSXxBsh9xQSYt8ZOseresfNeHewFVC2g0Au9181xob9eXTv4hRysi9k3gRVCXOUmBH+J2bA==
+github-release-from-changelog@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/github-release-from-changelog/-/github-release-from-changelog-2.1.0.tgz#7c6974862eff9ea3b5b96edffaeab711457e011e"
+  integrity sha512-3g8UfE3Ywls6NC5UlANXVfemSculsRRRU449sWCaHE7ekgdHoBE8EJwRunnWK1st5MZi7vn02aKAQ6yPdE5jMA==
   dependencies:
     grizzly "^3.0.3"
     minimist "^1.2.0"
@@ -2784,13 +2784,13 @@ npmlog@^4.0.2:
     gauge "~2.7.3"
     set-blocking "~2.0.0"
 
-npmpub@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/npmpub/-/npmpub-4.1.0.tgz#b862fbd2e5721dfbd4c8d9da5b9ef7ac4888a4c3"
-  integrity sha512-aFaX5gp09tl5NxpqxkHg1QCZrTx6QHBLfQkfonXR0ohwvWeNJItFVSN2R+6IVKtLis085A6zbOUi8r6lMtPO9A==
+npmpub@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/npmpub/-/npmpub-5.0.0.tgz#47be2fdff68e9ef4b56d0071746f66975dbb352c"
+  integrity sha512-XmfZlR7H8LwuVMPc0Zx2RU/xetk7ldRme+xtHRnwMqSQU5aBJ8hzgQtfX1aRnQNIFWOpEY1iXCJk7fWhFc9W4w==
   dependencies:
     chalk "^1.1.1"
-    github-release-from-changelog "^1.3.2"
+    github-release-from-changelog "^2.0.0"
     minimist "^1.2.0"
     shelljs "^0.5.3"
     trash "^3.4.1"
