@@ -3,7 +3,7 @@
 [![Build Status](https://github.com/MoOx/react-topbar-progress-indicator/workflows/Build/badge.svg)](https://github.com/MoOx/react-topbar-progress-indicator/actions)
 [![Version](https://img.shields.io/npm/v/react-topbar-progress-indicator.svg)](https://github.com/MoOx/react-topbar-progress-indicator/blob/master/CHANGELOG.md)
 
-> topbar progress indicator React component
+> `topbar` progress indicator as a React component
 
 Will simply `show()` and `hide()` [topbar](https://github.com/buunguyen/topbar)
 when the component is respectively mounted and unmounted.
@@ -19,7 +19,9 @@ You will need to have both instances unmounted.
 ## Installation
 
 ```console
-$ npm install react-topbar-progress-indicator
+npm install react-topbar-progress-indicator
+## or
+yarn add react-topbar-progress-indicator
 ```
 
 ## Usage
@@ -72,12 +74,24 @@ String that represent the shadow color (hexa, default: `#000`).
 
 ---
 
-## CONTRIBUTING
+## Changelog
 
-- ⇄ Pull requests and ★ Stars are always welcome.
-- For bugs and feature requests, please create an issue.
-- Pull requests must be accompanied by passing automated tests (`$ npm test`).
+Check the [changelog](./CHANGELOG.md) for more informations about recent
+releases.
+You might also find [releases notes on GitHub](https://github.com/MoOx/react-topbar-progress-indicator/releases).
 
-## [CHANGELOG](CHANGELOG.md)
+## Contribute
 
-## [LICENSE](LICENSE)
+_⇄ Pull requests and ★ Stars are always welcome._
+
+Please read the [contribution guidelines](./CONTRIBUTING.md) before contributing.
+
+## Code of Conduct
+
+We want the community to be friendly and respectful to each other. Please read
+[our full code of conduct](./CODE_OF_CONDUCT.md) so that you can understand what
+actions will and will not be tolerated.
+
+## License
+
+[MIT](./LICENSE)
