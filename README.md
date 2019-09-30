@@ -1,6 +1,6 @@
 # react-topbar-progress-indicator
 
-[![Unix Build status](https://img.shields.io/travis/MoOx/react-topbar-progress-indicator/master.svg?branch=master&label=unix%20build)](https://travis-ci.org/MoOx/react-topbar-progress-indicator)
+[![Build Status](https://github.com/MoOx/react-topbar-progress-indicator/workflows/Build/badge.svg)](https://github.com/MoOx/react-topbar-progress-indicator/actions)
 [![Version](https://img.shields.io/npm/v/react-topbar-progress-indicator.svg)](https://github.com/MoOx/react-topbar-progress-indicator/blob/master/CHANGELOG.md)
 
 > topbar progress indicator React component
