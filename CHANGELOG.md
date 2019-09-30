@@ -1,20 +1,22 @@
-# 4.0.1 - 2019-08-16
+# Changelog of `react-topbar-progress-indicator`
+
+## 4.0.1 - 2019-08-16
 
 - Fix: use var instead of const/let for compatibility as this module is not transpiled
 
-# 4.0.0 - 2019-08-16
+## 4.0.0 - 2019-08-16
 
 - Switch from a React class to a function with `useEffect()` (require React 16.8)
 
-## Internal
+### Internal
 
 - No more babel, just vanilla JS (typed with flow annotations in comments)
 
-# 3.0.0 - 2019-08-16
+## 3.0.0 - 2019-08-16
 
 - React 16.9.0 compat (replace `componentWillMount` by `componentDidMount`) [#5](https://github.com/MoOx/react-topbar-progress-indicator/issues/5)
 
-## Internal
+### Internal
 
 - Test on node 8 & 10
 - Babel 6 -> 7
@@ -22,12 +24,12 @@
 - Removed eslint & nyc on the codebase (unecessary considering the non complexity of the code of this component)
 - Added prettier
 
-# 2.0.0 - 2016-04-01
+## 2.0.0 - 2016-04-01
 
 - react 16 compat
 - update props type via babel-plugin-flow-react-proptypes
 - use of babel-preset-env for transpilation instead of es2015
 
-# 1.0.0 - 2016-04-01
+## 1.0.0 - 2016-04-01
 
 ✨ Initial release
