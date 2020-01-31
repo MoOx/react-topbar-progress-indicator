@@ -15,6 +15,7 @@
   "license": "MIT",
   "repository": "https://github.com/MoOx/react-topbar-progress-indicator.git",
   "main": "src/index.js",
+  "types": "src/index.d.ts",
   "dependencies": {
     "topbar": "^0.1.3"
   },
