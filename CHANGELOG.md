@@ -1,5 +1,9 @@
 # Changelog of `react-topbar-progress-indicator`
 
+## 4.1.0 - 2020-01-31
+
+- Add Typescript declaration [#10](https://github.com/MoOx/react-topbar-progress-indicator/pull/10) by @komsitr
+
 ## 4.0.2 - 2019-09-30
 
 - Fix: avoid arrow function to improve browser compatibility
