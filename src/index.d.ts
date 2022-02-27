@@ -9,9 +9,6 @@ export interface TopBarConfig {
   shadowColor?: string;
 }
 
-export default class TopBarProgress extends React.Component<
-  React.Props,
-  React.State
-> {
+export default class TopBarProgress extends React.Component {
   static config(config: TopBarConfig): void;
 }
