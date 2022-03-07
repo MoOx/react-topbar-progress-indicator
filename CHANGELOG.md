@@ -1,5 +1,9 @@
 # Changelog of `react-topbar-progress-indicator`
 
+## 4.1.1 - 2022-03-07
+
+- Fix TypeScript declaration: Remove unnecessary generic args [#28](https://github.com/MoOx/react-topbar-progress-indicator/pull/28) by [@lpsinger](https://github.com/lpsinger)
+
 ## 4.1.0 - 2020-01-31
 
 - Add Typescript declaration [#10](https://github.com/MoOx/react-topbar-progress-indicator/pull/10) by @komsitr
